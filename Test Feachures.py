@@ -12,11 +12,6 @@ bot = commands.Bot(command_prefix='#')
 async def on_ready():
     print(f'Logged in as {bot.user.name}')
 
-@bot.event
-async def on_message(*arg :str):
-    print(f'Message from : {arg}')
-
-
 @bot.command()
 async def ping(ctx: commands.Context):
     await ctx.send('Pong')
